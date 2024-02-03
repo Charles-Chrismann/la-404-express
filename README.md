@@ -14,6 +14,8 @@ De plus il est préférable d'avoir une structure de projet organisée. La branc
   npx prisma migrate dev
 ```
 
+Ensuite, créer un fichier .env, en duppliquant puis renommant le fichier .env.example. JWT_SECRET est une chaine de caractère random.
+
 run project:
 
 ```bash
