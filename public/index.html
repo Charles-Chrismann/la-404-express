@@ -1,29 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-        <h1>Title</h1>
-        <button>Create User</button>
-    <script>
-        document.querySelector('button').addEventListener('click', () => {
-            fetch('/api/users/me', {
-                // method: 'POST',
-                headers: {
-                    "Content-Type": "application/json",
-                    "authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsImlhdCI6MTcwNjgxMTM5Mn0.Os0CAXPXpoVpclJunoalFrwjx3kf3HRvI-Bq5CX7Omo"
-                },
-                // body: JSON.stringify({
-                //     username: 'User 2',
-                //     password: "password!"
-                // }),
-            })
-            .then(res => res.json())
-            .then(res => console.log(res))
-        })
-    </script>
+  <section id="register">
+    <hr>
+    <h2>Register</h2>
+    <div>
+      <label for="register-username">Username</label>
+      <input type="text" id="register-username">
+    </div>
+    <div>
+      <label for="register-password">password</label>
+      <input type="text" id="register-password">
+    </div>
+    <button>S'inscrire</button>
+    <p>Réponse de l'api</p>
+    <pre></pre>
+  </section>
+
+  <section id="login">
+    <hr>
+    <h2>Login</h2>
+    <div>
+      <label for="login-username">Username</label>
+      <input type="text" id="login-username">
+    </div>
+    <div>
+      <label for="login-password">password</label>
+      <input type="text" id="login-password">
+    </div>
+    <button>Se Connecter</button>
+    <p>Réponse de l'api</p>
+    <pre></pre>
+  </section>
+
+  <section id="users-me">
+    <hr>
+    <h2>Users - Me</h2>
+    <div>
+      <label for="users-jwt">JWT</label>
+      <input type="text" id="users-jwt">
+    </div>
+    <button>Get /users/me</button>
+    <p>Réponse de l'api</p>
+    <pre></pre>
+  </section>
+
+  <section id="products">
+    <hr>
+    <h2>Products</h2>
+    <div>
+      <label for="products-name">Nom du produit</label>
+      <input type="text" id="products-name">
+    </div>
+    <div>
+      <label for="products-description">description</label>
+      <input type="text" id="products-description">
+    </div>
+    <button>Ajouter le produit</button>
+    <p>Réponse de l'api</p>
+    <pre></pre>
+  </section>
+  <script src="js/main.js"></script>
 </body>
 </html>
